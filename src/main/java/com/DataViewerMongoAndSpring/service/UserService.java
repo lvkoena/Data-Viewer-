@@ -12,9 +12,13 @@ public class UserService {
     @Autowired
     private UserRepository repository;
 
+    // Method to save a user to the database
+    public User saveUser(User user) {
+        return repository.save(user);
+    }
+
     public List<User> getAllUsers() {
         return repository.findAll();
     }
-
     // Additional methods for CRUD operations
 }
