@@ -20,6 +20,20 @@ public class UserController {
         return service.getAllUsers();
     }
 
+    @GetMapping("/chart-data")
+    public List<Map<String, Object>> getUsersForChart() {
+        List<User> users = service.getAllUsers();
+
+        // Grouping users by name and calculating the count for each group
+        Map<String, Long> userCounts = users.stream()
+                .collect(Collectors.groupingBy(User::getName, Collectors.counting()));
+
+        // Transforming the data into the structure expected by ECharts
+        return userCounts.entrySet().stream()
+                .map(entry -> Map.of("name", entry.getKey(), "value", entry.getValue()))
+                .collect(Collectors.toList());
+    }
+
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
         User savedUser = service.saveUser(user);
