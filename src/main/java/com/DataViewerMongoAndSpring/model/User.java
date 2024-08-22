@@ -11,5 +11,9 @@ public class User {
     private String id;
     private String name;
     private String email;
+}
 
+class PieChartData {
+    private String name;
+    private int value;
 }
