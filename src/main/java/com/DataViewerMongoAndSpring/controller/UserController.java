@@ -7,7 +7,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/users")
@@ -21,7 +24,7 @@ public class UserController {
     }
 
     @GetMapping("/chart-data")
-    public List<Map<String, Object>> getUsersForChart() {
+    public List<Map<String, ? extends Serializable>> getUsersForChart() {
         List<User> users = service.getAllUsers();
 
         // Grouping users by name and calculating the count for each group
