@@ -1,5 +1,6 @@
 package com.DataViewerMongoAndSpring.controller;
 
+import com.DataViewerMongoAndSpring.model.PieChartData;
 import com.DataViewerMongoAndSpring.model.User;
 import com.DataViewerMongoAndSpring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,17 +25,9 @@ public class UserController {
     }
 
     @GetMapping("/chart-data")
-    public List<Map<String, ? extends Serializable>> getUsersForChart() {
+    public List<PieChartData> getChartData() {
         List<User> users = service.getAllUsers();
-
-        // Grouping users by name and calculating the count for each group
-        Map<String, Long> userCounts = users.stream()
-                .collect(Collectors.groupingBy(User::getName, Collectors.counting()));
-
-        // Transforming the data into the structure expected by ECharts
-        return userCounts.entrySet().stream()
-                .map(entry -> Map.of("name", entry.getKey(), "value", entry.getValue()))
-                .collect(Collectors.toList());
+        return users.isEmpty() ? List.of() : users.get(0).getChartData();
     }
 
     @PostMapping
