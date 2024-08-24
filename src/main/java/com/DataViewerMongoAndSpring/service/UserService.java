@@ -18,8 +18,9 @@ public class UserService {
         return repository.save(user);
     }
 
-    public List<User> getAllUsers() {
-        return repository.findAll();
+    public List<PieChartData> getChartData() {
+        User user = repository.findAll().get(0);  // Assuming a single user for simplicity
+        return user.getChartData();
     }
 
     // Initialize sample data
