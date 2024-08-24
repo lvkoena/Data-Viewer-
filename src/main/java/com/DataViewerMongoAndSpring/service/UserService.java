@@ -23,18 +23,18 @@ public class UserService {
     }
 
     // Initialize sample data
-//    @PostConstruct
-//    public void initData() {
-//        User user = new User();
-//        user.setName("John Doe");
-//        user.setEmail("john.doe@example.com");
-//        user.setChartData(List.of(
-//                new PieChartData("Search Engine", 1048),
-//                new PieChartData("Direct", 735),
-//                new PieChartData("Email", 580),
-//                new PieChartData("Union Ads", 484),
-//                new PieChartData("Video Ads", 300)
-//        ));
-//        repository.save(user);
-//    }
+    @PostConstruct
+    public void initData() {
+        User user = new User();
+        user.setName("John Doe");
+        user.setEmail("john.doe@example.com");
+        user.setChartData(List.of(
+                new PieChartData("Search Engine", 1048),
+                new PieChartData("Direct", 735),
+                new PieChartData("Email", 580),
+                new PieChartData("Union Ads", 484),
+                new PieChartData("Video Ads", 300)
+        ));
+        repository.save(user);
+    }
 }
