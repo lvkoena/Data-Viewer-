@@ -18,8 +18,7 @@ public class UserController {
 
     @GetMapping("/chart-data")
     public List<PieChartData> getChartData() {
-        List<User> users = service.getAllUsers();
-        return users.isEmpty() ? List.of() : users.get(0).getChartData();
+        return service.getChartData();
     }
 
     @PostMapping
