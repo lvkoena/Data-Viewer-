@@ -16,11 +16,6 @@ public class UserController {
     @Autowired
     private UserService service;
 
-    @GetMapping
-    public List<User> getAllUsers() {
-        return service.getAllUsers();
-    }
-
     @GetMapping("/chart-data")
     public List<PieChartData> getChartData() {
         List<User> users = service.getAllUsers();
