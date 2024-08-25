@@ -30,7 +30,7 @@ public class UserService {
 //        user.setName("John Doe");
 //        user.setEmail("john.doe@example.com");
         user.setChartData(List.of(
-                new PieChartData("Java Developers", 1048),
+                new PieChartData("Java Developers", 1047),
                 new PieChartData("Angular Developers", 735),
                 new PieChartData("Python Developers", 580),
                 new PieChartData("C# Developers", 484),
