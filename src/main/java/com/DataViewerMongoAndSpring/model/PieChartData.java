@@ -32,5 +32,4 @@ public class PieChartData {
     // Default constructor
     public PieChartData() {
     }
-    // Getters and setters
 }
