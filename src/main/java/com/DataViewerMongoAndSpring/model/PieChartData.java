@@ -1,7 +1,11 @@
 package com.DataViewerMongoAndSpring.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 public class PieChartData {
 
     @JsonProperty("name")
@@ -19,7 +23,14 @@ public class PieChartData {
         this.value = value;
     }
 
+    public PieChartData(String name, int value, int year) {
+        this.name = name;
+        this.value = value;
+        this.year = year;
+    }
+
     // Default constructor
     public PieChartData() {
     }
+    // Getters and setters
 }
