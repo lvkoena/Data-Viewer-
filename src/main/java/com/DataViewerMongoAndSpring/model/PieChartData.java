@@ -10,7 +10,7 @@ public class PieChartData {
     @JsonProperty("value")
     private int value;
 
-    @JsonProperty
+    @JsonProperty("year")
     private int year;
 
     // Constructor to initialize name and value
