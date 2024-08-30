@@ -21,6 +21,11 @@ public class UserController {
         return service.getChartData();
     }
 
+    @GetMapping("/line-data")
+    public List<StackedLineData> getStackedLineChartData() {
+        return service.getStackedLineChartData();
+    }
+
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
         User savedUser = service.saveUser(user);
