@@ -23,11 +23,6 @@ public class UserService {
         return user.getChartData();
     }
 
-    public List<PieChartData> getChartData() {
-        User user = repository.findAll().get(0);  // Assuming a single user for simplicity
-        return user.getChartData();
-    }
-
     // Initialize sample data
     @PostConstruct
     public void initData() {
