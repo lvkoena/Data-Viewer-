@@ -19,7 +19,7 @@ public class UserService {
     }
 
     public List<PieChartData> getChartData() {
-        User user = repository.findAll().get(0);  // Assuming a single user for simplicity
+        User user = repository.findAll().get(0);
         return user.getChartData();
     }
 
