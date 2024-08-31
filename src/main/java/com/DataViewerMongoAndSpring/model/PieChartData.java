@@ -17,7 +17,6 @@ public class PieChartData {
     @JsonProperty("year")
     private int year;
 
-    // Constructor to initialize name and value
     public PieChartData(String name, int value) {
         this.name = name;
         this.value = value;
@@ -29,7 +28,6 @@ public class PieChartData {
         this.year = year;
     }
 
-    // Default constructor
     public PieChartData() {
     }
 }
