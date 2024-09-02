@@ -16,5 +16,9 @@ public class ChartDataService {
     public void saveChartData(List<ChartData> chartDataList) {
         chartDataRepository.saveAll(chartDataList);
     }
+
+    public List<ChartData> findAll() {
+        return chartDataRepository.findAll();
+    }
 }
 
