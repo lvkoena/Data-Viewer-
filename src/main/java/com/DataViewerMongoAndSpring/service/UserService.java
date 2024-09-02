@@ -1,9 +1,6 @@
 package com.DataViewerMongoAndSpring.service;
 
-import com.DataViewerMongoAndSpring.model.PieChartData;
-import com.DataViewerMongoAndSpring.model.User;
 import com.DataViewerMongoAndSpring.repository.UserRepository;
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

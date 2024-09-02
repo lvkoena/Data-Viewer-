@@ -1,7 +1,5 @@
 package com.DataViewerMongoAndSpring.controller;
 
-import com.DataViewerMongoAndSpring.model.PieChartData;
-import com.DataViewerMongoAndSpring.model.User;
 import com.DataViewerMongoAndSpring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
