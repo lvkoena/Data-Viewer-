@@ -16,4 +16,12 @@ public class User {
     private String name;
     private String email;
     private List<PieChartData> chartData;
+
+    public User() {}
+
+    public User(String name, String email, List<PieChartData> chartData) {
+        this.name = name;
+        this.email = email;
+        this.chartData = chartData;
+    }
 }
