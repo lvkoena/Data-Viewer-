@@ -13,8 +13,6 @@ public class ChartData {
     private String stack;
     private int[] data;
 
-    // Getters and Setters
-
     public ChartData(String name, String type, String stack, int[] data) {
         this.name = name;
         this.type = type;
@@ -22,7 +20,6 @@ public class ChartData {
         this.data = data;
     }
 
-    // Add default constructor, getters and setters here
     public ChartData() {}
 
     public String getId() {
